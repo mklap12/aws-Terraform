@@ -45,7 +45,7 @@ resource "aws_route_table" "xx-my_vpc_eu_central_1c_public" {
     vpc_id = aws_vpc.my_vpc.id
     route {
         cidr_block = "0.0.0.0/0"
-        gateway_id = aws_internet_gateway.my_vpc_igw.id
+        gateway_id = aws_internet_gateway.xx-my_vpc_igw
     }
     tags = {
         Name = "${local.staging_env}- Public Subnet Route Table"
